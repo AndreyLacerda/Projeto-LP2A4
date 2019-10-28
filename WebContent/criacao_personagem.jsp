@@ -23,43 +23,46 @@
 					<div class="tile is-parent"></div>
 				</div>
 				<div class="tile is-parent is-vertical">
-					<div class="field">
-						<label class="label">Nome</label>
-						<div class="control has-icons-left">
-							<input class="input" placeholder="Nome..." type="text" id="nome"> <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
-						</div>
-					</div>
-					<div class="field">
-						<label class="label">Dificuldade</label>
-						<div class="control">
-							<div class="select" id="dificuldade">
-								<select>
-									<option>
-										Fácil
-									</option>
-									<option>
-										Normal
-									</option>
-									<option>
-										Difícil
-									</option>
-									<option>
-										Molina Mode (God Mode)
-									</option>
-								</select>
+					<div class="tile is-parent">
+						<article class="tile is-child notification is-danger">
+							<div class="field">
+								<label class="label">Nome</label>
+								<div class="control has-icons-left">
+									<input class="input" placeholder="Nome..." type="text" required> <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="field">
-						<label class="label">Gênero</label>
-						<div class="control">
-							<label class="radio"><input name="question" type="radio" id="M"> Masculino</label> <label class="radio"><input name="question" type="radio" id="F"> Feminino</label>
-						</div>
-					</div>
-					<div class="field is-grouped">
-						<div class="control">
-							<button class="button is-link">Criar personagem</button>
-						</div>
+							<div class="field">
+								<label class="label">Subject</label>
+								<div class="control" >
+									<div class="select">
+										<select name="modo">
+											<option>
+												Fácil
+											</option>
+											<option>
+												Normal
+											</option>
+											<option>
+												Difícil
+											</option>
+											<option>
+												Molina Mode (God Mode)
+											</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="control">
+									<label class="radio"><input name="question" type="radio">Masculino</label> <label class="radio"><input name="question" type="radio">Feminino</label>
+								</div>
+							</div>
+							<div class="field is-grouped">
+  								<div class="control">
+    								<button class="button is-link">Criar personagem</button>
+  								</div>
+  							</div>
+						</article>
 					</div>
 				</div>
 			</div>
@@ -67,4 +70,4 @@
 		<div class="tile is-parent is-vertical"></div>
 	</div>
 </body>
-</html>	
+</html>
