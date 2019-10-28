@@ -54,6 +54,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
+									<label class="label">Gênero</label>
 									<label class="radio"><input name="question" type="radio">Masculino</label> <label class="radio"><input name="question" type="radio">Feminino</label>
 								</div>
 							</div>
