@@ -26,26 +26,26 @@
 					<div class="tile is-parent">
 						<article class="tile is-child notification is-danger">
 							<div class="field">
-								<label class="label">Nome</label>
+								<label class="label is-centered">Nome</label>
 								<div class="control has-icons-left">
 									<input class="input" placeholder="Nome..." type="text" required> <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
 								</div>
 							</div>
-							<div class="field">
+							<div class="field" >
 								<label class="label">Subject</label>
 								<div class="control" >
 									<div class="select">
-										<select name="modo">
-											<option>
+										<select name="modo" required>
+											<option value="facil">
 												Fácil
 											</option>
-											<option>
+											<option value="medio">
 												Normal
 											</option>
-											<option>
+											<option value="dificil">
 												Difícil
 											</option>
-											<option>
+											<option value="god">
 												Molina Mode (God Mode)
 											</option>
 										</select>
@@ -55,7 +55,7 @@
 							<div class="field">
 								<div class="control">
 									<label class="label">Gênero</label>
-									<label class="radio"><input name="question" type="radio">Masculino</label> <label class="radio"><input name="question" type="radio">Feminino</label>
+									<label class="radio"><input name="question" type="radio" value="M">Masculino</label> <label class="radio"><input name="question" type="radio" value="F">Feminino</label>
 								</div>
 							</div>
 							<div class="field is-grouped">
@@ -68,7 +68,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="tile is-parent is-vertical"></div>
 	</div>
 </body>
 </html>
