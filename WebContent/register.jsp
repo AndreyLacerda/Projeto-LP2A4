@@ -15,15 +15,6 @@
 	<div class="columns is-centered">
 		<div class='column is-one-third is-centered'>
 			<form method="post" action="Cadastro">
-				<div class="field">
-				  <label class="label">Login</label>
-				  <div class="control has-icons-left has-icons-right">
-				    <input class="input" type="text" name="login" maxlength="45" placeholder="Seu nome de Login" required="true">
-				    <span class="icon is-small is-left">
-				      <i class="fas fa-user"></i>
-				    </span>
-				  </div>
-				</div>
 				
 				<div class="field">
 				  <label class="label">Email</label>

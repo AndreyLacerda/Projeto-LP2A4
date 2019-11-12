@@ -34,17 +34,16 @@ public class Cadastro extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
-		String login = request.getParameter("login");
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
 		EntityManager em = emf.createEntityManager();
 		
-		Usuario usuario = em.find(Usuario.class, email+login);
+		Usuario usuario = em.find(Usuario.class, email);
 		
 		if (usuario == null) {
 			String senha = request.getParameter("senha");
 			
-			Usuario novoUsuario = new Usuario(email, login, senha);
+			Usuario novoUsuario = new Usuario(email, senha);
 			
 			em.getTransaction().begin();
 			em.persist(novoUsuario);

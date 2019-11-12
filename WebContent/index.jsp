@@ -14,19 +14,20 @@
 <body>
 	<div class="columns is-centered">
 		<div class='column is-one-third is-centered'>
+		<h1>Logue e Jogue Já!</h1>
 			<form method="post" action="Login">
 			
 				<div class="field">
 				  <div class="control has-icons-left has-icons-right">
-				    <input class="input" type="text" placeholder="Login" maxlength="45" required="true">
+				    <input name="email" class="input" type="email" placeholder="Email" maxlength="45" required="true">
 				    <span class="icon is-small is-left">
-				      <i class="fas fa-user"></i>
+				      <i class="fas fa-envelope"></i>
 				    </span>
 				  </div>
 				</div>
 				<div class="field">
 				  <p class="control has-icons-left">
-				    <input class="input" type="password" placeholder="Senha" maxlength="45" required="true">
+				    <input name="senha" class="input" type="password" placeholder="Senha" maxlength="45" required="true">
 				    <span class="icon is-small is-left">
 				      <i class="fas fa-lock"></i>
 				    </span>
