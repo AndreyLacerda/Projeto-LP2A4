@@ -1,0 +1,1 @@
+você tentou roubar do rui e foi empalado, falou otario

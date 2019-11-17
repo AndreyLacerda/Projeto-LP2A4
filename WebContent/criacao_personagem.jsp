@@ -38,14 +38,8 @@
 										<select name="modo" required>
 											<option value="facil">
 												Fácil
-											</option>
-											<option value="medio">
-												Normal
-											</option>
+											</option>										
 											<option value="dificil">
-												Difícil
-											</option>
-											<option value="god">
 												Molina Mode (God Mode)
 											</option>
 										</select>

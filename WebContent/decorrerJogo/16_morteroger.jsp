@@ -1,0 +1,1 @@
+usou krokodil e foi fumado lixo
