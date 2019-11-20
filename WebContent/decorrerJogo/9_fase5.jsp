@@ -31,8 +31,8 @@
     <section class="hero" id="cabeca">
         <div class="hero-body">
         <div class="container">
-            <h1 class="title" id="h1head">Fase 3</h1>
-            <h2 class="subtitle" id="h2head">Escolhas futuras</h2>
+            <h1 class="title" id="h1head">Fase 5</h1>
+            <h2 class="subtitle" id="h2head">Faculdade</h2>
         </div>
         </div>
     </section>
@@ -41,47 +41,22 @@
         <div class="card">
         <div class="card-content">
             <p class="level-item has-text-centered">
-      <img style="padding-bottom:10px" src="../imagens/Maguila.jpg"  width="500" height="500">
             <div class="card">
-            
-            
-            <!-- Aqui o if para aparecer o texto de acordo com o tipo de criança -->
-            
-            <p style="padding:20px">Você não foi uma criança muito comportada, nunca estudou nem deu valor a nada. Seu destino é ir para uma escola ruim. Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p>
-        <!--<p style="padding:20px">Você foi uma criança muito comportada, deu valor a tudo e estudou bastante. Entrou em uma boa escola e está prestes a terminar o ensino médio.  Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p> -->
-            
-            
+            <p style="padding:20px">Você entrou na faculdade! Agora seu desafio é a dedicação nas aulas... ou não.</p>
             </div>
+            </p>
         </div>
         <footer class="card-footer">
-        
-        <!--  criança ruim -->
-        
             <p class="card-footer-item">
             <span>
-            <a href="8_fase4dif.jsp">Socar a preguiça com o Maguila</a>
-            </span>
-            </p>
-            
-            <p class="card-footer-item">
-            <span>
-        	<a href="8_fase4dif.jsp">Sai daqui cara, eu nem te conheço</a>  
-            </span>
-            </p>
-            
-        <!--  criança boa -->
-            
-     <!--   <p class="card-footer-item">
-            <span>
-            <a href="7_fase4.jsp">Socar a preguiça com o Maguila</a>
+            <a href="12_fase6.jsp">Estudar muito nas aulas e não fumar anarguilhos</a>
             </span>
             </p>
             <p class="card-footer-item">
             <span>
-        	<a href="7_fase4.jsp">Sai daqui cara, eu nem te conheço</a> 
+                <a href="13_fase5transicao.jsp">Isso é muito difícil! Vou pro bosque mesmo, não tem jeito.</a>
             </span>
-            </p>  -->   
-            
+            </p>
         </footer>
         </div>
     </section>

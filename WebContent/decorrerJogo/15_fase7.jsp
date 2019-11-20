@@ -31,8 +31,8 @@
     <section class="hero" id="cabeca">
         <div class="hero-body">
         <div class="container">
-            <h1 class="title" id="h1head">Fase 3</h1>
-            <h2 class="subtitle" id="h2head">Escolhas futuras</h2>
+            <h1 class="title" id="h1head">Fase 7</h1>
+            <h2 class="subtitle" id="h2head">É o começo ou o fim?</h2>
         </div>
         </div>
     </section>
@@ -41,47 +41,23 @@
         <div class="card">
         <div class="card-content">
             <p class="level-item has-text-centered">
-      <img style="padding-bottom:10px" src="../imagens/Maguila.jpg"  width="500" height="500">
+            <img style="padding-bottom:20px" src="../imagens/Gustavin.jpg"  width="500" height="500">
             <div class="card">
-            
-            
-            <!-- Aqui o if para aparecer o texto de acordo com o tipo de criança -->
-            
-            <p style="padding:20px">Você não foi uma criança muito comportada, nunca estudou nem deu valor a nada. Seu destino é ir para uma escola ruim. Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p>
-        <!--<p style="padding:20px">Você foi uma criança muito comportada, deu valor a tudo e estudou bastante. Entrou em uma boa escola e está prestes a terminar o ensino médio.  Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p> -->
-            
-            
+            <p style="padding:20px">A aula é sobre Java web, você não sabe como se sente sobre isso mas conheceu o professor, o que será mais sábio fazer?</p>
             </div>
+            </p>
         </div>
         <footer class="card-footer">
-        
-        <!--  criança ruim -->
-        
             <p class="card-footer-item">
             <span>
-            <a href="8_fase4dif.jsp">Socar a preguiça com o Maguila</a>
-            </span>
-            </p>
-            
-            <p class="card-footer-item">
-            <span>
-        	<a href="8_fase4dif.jsp">Sai daqui cara, eu nem te conheço</a>  
-            </span>
-            </p>
-            
-        <!--  criança boa -->
-            
-     <!--   <p class="card-footer-item">
-            <span>
-            <a href="7_fase4.jsp">Socar a preguiça com o Maguila</a>
+            <a href="25_fim.jsp">O cara tem um oitão mano, vou estudar</a>
             </span>
             </p>
             <p class="card-footer-item">
             <span>
-        	<a href="7_fase4.jsp">Sai daqui cara, eu nem te conheço</a> 
+                <a href="20_kart.jsp">Eu gosto é de PHP mano, sai fora Java</a>
             </span>
-            </p>  -->   
-            
+            </p>
         </footer>
         </div>
     </section>

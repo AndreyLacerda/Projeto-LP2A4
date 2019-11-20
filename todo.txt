@@ -1,0 +1,29 @@
+Fazer com que o usuário não possa voltar as páginas
+
+na criação do personagem salvar se o modo vai ser fácil ou difícil e retirar a parte de escolher genero
+
+dependendo da dificuldade mandar da pagina de criação de personagem para a fase 1 dificil ou fase 1 facil
+
+salvar nas variáveis 
+(
+fase 1 dificil salva tipo de criança
+
+na fase 3 dificil (6_fase3dif.jsp) deve ter um if pra dizer qual escola ele conseguiu (escola boa sendo boa criança e escola ruim sendo criança ruim. os textos já estão feitos, 
+só precisar por um if pra aparecer um dos dois), e redireciona para pagina fase4.jsp caso seja uma boa criança, e fase4dif.jsp caso seja o capeta. (tem comentários na página explicando)
+também é preciso salvar o que ele achou do maguila.
+
+na fase 5 dificil (10_fase5dif.jsp) ele tem que guardar na variável se foi com o vampeta ou não.
+
+na fase 6 dificil (14_fase6dif.jsp) se o jogador decidir jogar contra o rui, deve verificar se socou a preguiça com o maguila ou não. Caso sim, vai pra fase 6 transição, 
+caso não vai pra fase 7 dificil. (comentários no código)
+
+na fase do kart (20_kart.jsp) deve ser os ifs, caso o jogador esteja no fácil, vai pra 22_ajudaroger.jsp caso o jogador esteja no dificil e seja amigo do vampeta, vai pra 23_ajudavamp.jsp, 
+caso no dificil e não seja amigo do vampeta vai pra 24_mortemolina.jsp (comentários no código)
+)
+
+
+Toda fase tem um número nela (provavelmente vai ter que fazer uma variável java dentro da página static final = número), e pra salvar o estado do cara, vai salvar esse número no bd. 
+Quando ele for continuar, vai ter um switch lá, case 1: fase1.jsp.
+Também precisam ser salvas as escolhas dele.
+
+Mudar as páginas feitas antes (login e tal)
