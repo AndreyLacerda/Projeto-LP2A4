@@ -2,36 +2,15 @@ package Entities;
 
 public class Personagem {
 
-	private String nome;
-	private String genero;
 	private int fase;
 	private int tipoCrianca;
 	private boolean maguila;
 	private boolean vampeta;
 	private int dificuldade;
 	
-	
-	public Personagem(String nome, String genero, int dificuldade) {
-		this.nome = nome;
+	public Personagem(int dificuldade, int fase) {
 		this.dificuldade = dificuldade;
-		this.genero = genero;
-		this.fase = 0; // fase 0 é escolha de dificuldade
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getGenero() {
-		return genero;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
+		this.fase = fase;
 	}
 
 	public int getDificuldade() {

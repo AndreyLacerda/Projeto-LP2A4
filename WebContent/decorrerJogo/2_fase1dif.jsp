@@ -46,18 +46,20 @@
             </div>
             </p>
         </div>
+        <form method="post" action="/Escolhas">
         <footer class="card-footer">
             <p class="card-footer-item">
             <span>
-            <a href="4_fase2dif.jsp">Sou comportado</a>
+            	<input name="crianca" class="button" onclick="/Redirect" value="comportado"><a >Sou comportado</a>
             </span>
             </p>
             <p class="card-footer-item">
             <span>
-                <a href="4_fase2dif.jsp">SOU O CRAMUNHÃO</a>
+                <input name="crianca" class="button" onclick="/Redirect" value="cramunhao"><a >SOU CRAMUNHÃO</a>
             </span>
             </p>
         </footer>
+        </form>
         </div>
     </section>
   </body>
