@@ -40,7 +40,7 @@
 				  <div class="control">
 				    <label class="checkbox">
 				      <input type="checkbox" required="true">
-				      Eu li e concordo com os <a href="#">Termos de uso</a>
+				      Eu li e concordo com os <a>Termos de uso</a>
 				    </label>
 				  </div>
 				</div>

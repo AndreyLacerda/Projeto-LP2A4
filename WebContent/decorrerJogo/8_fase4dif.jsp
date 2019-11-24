@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -50,12 +50,12 @@
         <footer class="card-footer">
             <p class="card-footer-item">
             <span>
-            <a href="10_fase5dif.jsp">Tomar umazinha com o Zeca, o mito</a>
+            <a href="../PassarFase">Tomar umazinha com o Zeca, o mito</a>
             </span>
             </p>
             <p class="card-footer-item">
             <span>
-                <a href="11_mortezeca.jsp">Samba é muito ruim! Música de vagabundo! Tira isso pelo amor de Deus.</a>
+                <a href="../Morte">Samba é muito ruim! Música de vagabundo! Tira isso pelo amor de Deus.</a>
             </span>
             </p>
         </footer>

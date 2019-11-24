@@ -11,8 +11,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import Entities.Personagem;
 import Entities.Usuario;
 
 /**
@@ -50,20 +50,14 @@ public class Login extends HttpServlet {
 			out.close();
 		} else {
 			if (usuario.getSenha().equals(senha)) {
-				Personagem personagem = em.find(Personagem.class, 1);
-				
-				
-				
-				PrintWriter out = response.getWriter();
-				out.println("<script>");
-				out.println("location='criacao_personagem.jsp';");
-				out.println("</script>");
-				out.close();
+				HttpSession session = request.getSession();
+				session.setAttribute("usuario", usuario.getEmail());
+				response.sendRedirect("Redirect");
 			} else {
 				PrintWriter out = response.getWriter();
 				out.println("<script>");
 				out.println("alert('Senha Incorreta!');");
-				out.println("location='criacao_personagem.jsp';");
+				out.println("location='index.jsp';");
 				out.println("</script>");
 				out.close();
 			}
@@ -74,7 +68,7 @@ public class Login extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	*/
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}

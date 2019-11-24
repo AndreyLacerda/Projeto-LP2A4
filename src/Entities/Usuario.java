@@ -9,7 +9,6 @@ public class Usuario {
 	@Id
 	private String email;
 	private String senha;
-	private Personagem personagem;
 	
 	public Usuario() {
 	}
@@ -27,9 +26,4 @@ public class Usuario {
 		return senha;
 	}
 	
-	public void getPersonagem() {
-		//aqui vai ter que dar um jeito de salvar o personagem do cara no this.personagem
-	}
-
-
 }

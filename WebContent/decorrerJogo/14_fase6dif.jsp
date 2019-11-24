@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -50,7 +50,7 @@
         <footer class="card-footer">
             <p class="card-footer-item">
             <span>
-            <a href="17_morterui.jsp">Tentar roubar do Rui pois só assim vou ganhar</a>
+            <a href="../Morte">Tentar roubar do Rui pois só assim vou ganhar</a>
             </span>
             </p>
             <p class="card-footer-item">
@@ -58,14 +58,26 @@
             
             <!-- aqui tem que ter um if, dependendo se ele socou a preguiça com o maguila ou não. -->
             
+	            <%@page import="Entities.Personagem, 
+	            javax.persistence.EntityManager, 
+	            javax.persistence.EntityManagerFactory, 
+	            javax.persistence.Persistence" %>
+	            <%
+		            EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
+		    		EntityManager em = emf.createEntityManager();
+		    		
+		    		Personagem personagem = em.find(Personagem.class, userId);
+		    		
+	            	if (personagem.getMag() == true){
+	            %>
             	<!-- Se ele socou com o maguila -->
-            
                 <a href="18_fase6transicao.jsp">Jogar na moralzinha, com muito medo.</a>
                 
+                <%} else{ %>
                 <!-- Se ele não socou -->
                 
-                <!-- <a href="19_fase7dif.jsp">Jogar na moralzinha, com muito medo.</a> -->
-                
+                <a href="../PassarFase">Jogar na moralzinha, com muito medo.</a>
+                <%} %>
             </span>
             </p>
         </footer>

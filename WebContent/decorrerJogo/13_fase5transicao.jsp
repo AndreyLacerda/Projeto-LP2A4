@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -50,12 +50,12 @@
         <footer class="card-footer">
             <p class="card-footer-item">
             <span>
-            <a href="12_fase6.jsp">Dar um roundhouse kick no rogérin e ajudar ele a sair das drogas. Fiz a escolha errada, vou voltar pra aula.</a>
+            <a href="../PassarFase">Dar um roundhouse kick no rogérin e ajudar ele a sair das drogas. Fiz a escolha errada, vou voltar pra aula.</a>
             </span>
             </p>
             <p class="card-footer-item">
             <span>
-                <a href="16_morteroger.jsp">BORA DESGRAÇÃÃããÃ</a>
+                <a href="../Morte">BORA DESGRAÇÃÃããÃ</a>
             </span>
             </p>
         </footer>

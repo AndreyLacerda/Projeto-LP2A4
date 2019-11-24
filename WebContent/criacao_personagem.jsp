@@ -13,12 +13,13 @@
 	</script>
 </head>
 <body>
+<%@ include file="../topo.jsp" %>
 	<div class="columns is-centered">
 		<div class='column is-one-third is-centered'>
 		<nav class="level">
 			<p class="level-item has-text-centered"><a class="title">Criação de Personagem</a></p>
 		</nav>
-		<form method="post" action="/Redirect">
+		<form method="post" action="CriacaoPersonagem">
 		<div class="tile is-ancestor">
 			<div class="tile is-vertical is-8">
 				<div class="tile">
@@ -32,7 +33,7 @@
 									<label class="label">Subject</label>
 									<div class="control" >
 										<div class="select">
-											<select name="modo" required="">
+											<select name="modo" required>
 												<option value="1">Fácil</option>										
 												<option value="2">Molina Mode (God Mode)</option>
 											</select>

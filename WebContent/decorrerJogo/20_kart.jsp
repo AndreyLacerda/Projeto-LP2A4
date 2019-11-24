@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -56,16 +56,29 @@
             <span>
             
             <!-- Aqui devem ter os ifs/switch -->
-            
+
+            <%@page import="Entities.Personagem, 
+            javax.persistence.EntityManager, 
+            javax.persistence.EntityManagerFactory, 
+            javax.persistence.Persistence" %>
+            <%
+	            EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
+	    		EntityManager em = emf.createEntityManager();
+	    		
+	    		Personagem personagem = em.find(Personagem.class, userId);
+	  			
+            	if (personagem.getDificuldadeOriginal() == 2 && personagem.isVampeta() == true){
+            %>
+            <!-- Se estiver no difícil e for amigo do vampeta -->
+            	<a href="23_ajudavamp.jsp">Bora x1 então tio, bora bora</a>
+            	
+            <%} else { if(personagem.isVampeta() == false && personagem.getDificuldadeOriginal() == 2){ %>
+            <!-- Se estiver no difícil e não for amigo do vampeta -->
+           	 	<a href="../Morte">Bora x1 então tio, bora bora</a>
+            <%} else{ if(personagem.getDificuldadeOriginal() == 1){ %>
             <!-- Se estiver no fácil -->
                 <a href="22_ajudaroger.jsp">Bora x1 então tio, bora bora</a>
-                
-            <!-- Se estiver no difícil e for amigo do vampeta -->
-            <!-- <a href="23_ajudavamp.jsp">Bora x1 então tio, bora bora</a> -->
-            
-            <!-- Se estiver no difícil e não for amigo do vampeta -->
-            <!-- <a href="24_mortemolina.jsp">Bora x1 então tio, bora bora</a> --> 
-                
+             <%}}}%>
             </span>
             </p>
         </footer>

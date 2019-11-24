@@ -11,13 +11,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Entities.Personagem;
 
 /**
  * Servlet implementation class Crianca
  */
-@WebServlet("/Crianca")
+@WebServlet("/Variaveis")
 public class Variaveis extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,108 +32,102 @@ public class Variaveis extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	*/
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	HttpSession session = request.getSession();
+		String userId = (String)session.getAttribute("usuario");
+		int fase = (int)session.getAttribute("fase");
+		
+		switch(fase){
+			case 1: tipoCrianca(request, response); break;
+			case 3: escolhaMaguila(request, response); break;
+			case 5: escolhaVamp(request, response); break;
+		}
+    }
+    
     protected void tipoCrianca(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String crianca = request.getParameter("crianca");
+
     	EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
 		EntityManager em = emf.createEntityManager();
 		
-		int crian = Integer.parseInt(crianca);
+		HttpSession session = request.getSession();
+		String userId = (String)session.getAttribute("usuario");
     	
-    	Personagem personagem = em.find(Personagem.class, 1);
-    	Personagem personagem1 = em.find(Personagem.class, 0);
+    	Personagem personagem = em.find(Personagem.class, userId);
     	
     	if(personagem.getDificuldade() == 1) {
     		personagem.setTipoCrianca(1);
+    		personagem.setFase(2);
+    		
+    		em.getTransaction().begin();
+			em.merge(personagem);
+			em.getTransaction().commit();
     		
     		PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("location='4_fase2.jsp';");
+			out.println("location='decorrerJogo/4_fase2.jsp';");
 			out.println("</script>");
 			out.close();
+			
     	} else {
+    		String crianca = request.getParameter("crianca");
+    		int crian = Integer.parseInt(crianca);
     		
-    		PrintWriter out = response.getWriter();
-			out.println("<script>");
-			out.println("location='4_fase2dif.jsp';");
-			out.println("</script>");
-			out.close();
+    		personagem.setTipoCrianca(crian);
+    		
+    		em.getTransaction().begin();
+			em.merge(personagem);
+			em.getTransaction().commit();
+			
+			response.sendRedirect("PassarFase");
     	}
 	}
-    
-    protected void setVampeta(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String vampeta = request.getParameter("vampeta");
-    	EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
-		EntityManager em = emf.createEntityManager();
-		
-		boolean vamp = Boolean.parseBoolean(vampeta);
-    	
-    	Personagem personagem = em.find(Personagem.class, dificuldade);
-    	
-    	if(vamp == true) {
-    		personagem.setVampeta(true);	
-    	} else {
-    		personagem.setVampeta(false);
-    	}
-    	
-    	PrintWriter out = response.getWriter();
-		out.println("<script>");
-		out.println("location='14_fase6dif.jsp';");
-		out.println("</script>");
-		out.close();
-	}
-
-    protected void setMaguila(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String maguila = request.getParameter("maguila");
-    	EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
-		EntityManager em = emf.createEntityManager();
-		
-		boolean mag = Boolean.parseBoolean(maguila);
-    	
-    	Personagem personagem = em.find(Personagem.class, dificuldade);
-    	
-    	if(mag == true) {
-    		personagem.setVampeta(true);	
-    	} else {
-    		personagem.setVampeta(false);
-    	}
-    	
-    	PrintWriter out = response.getWriter();
-		out.println("<script>");
-		out.println("location='6_fase3dif.jsp';");
-		out.println("</script>");
-		out.close();
-	}
-    
-    protected void checarMaguila(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	Personagem personagem = em.find(Personagem.class, dificuldade);
-    	
-    	if(personagem.mag == true) {
-    		PrintWriter out = response.getWriter();
-    		out.println("<script>");
-    		out.println("location='18_fase6transicao.jsp';");
-    		out.println("</script>");
-    		out.close();	
-    	} else {
-    		PrintWriter out = response.getWriter();
-    		out.println("<script>");
-    		out.println("location='19_fase7dif.jsp';");
-    		out.println("</script>");
-    		out.close();
-    	}
-    	
-    	PrintWriter out = response.getWriter();
-		out.println("<script>");
-		out.println("location='6_fase3dif';");
-		out.println("</script>");
-		out.close();
-	}
-    
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
+	}
+	
+	protected void escolhaMaguila(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
+		EntityManager em = emf.createEntityManager();
+		
+		HttpSession session = request.getSession();
+		String userId = (String)session.getAttribute("usuario");
+    	
+    	Personagem personagem = em.find(Personagem.class, userId);
+    	
+    	boolean mag = Boolean.parseBoolean(request.getParameter("mag"));
+    	
+    	personagem.setMag(mag);
+
+		em.getTransaction().begin();
+		em.merge(personagem);
+		em.getTransaction().commit();
+		
+		response.sendRedirect("PassarFase");
+	}
+	
+	protected void escolhaVamp(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
+		EntityManager em = emf.createEntityManager();
+		
+		HttpSession session = request.getSession();
+		String userId = (String)session.getAttribute("usuario");
+    	
+    	Personagem personagem = em.find(Personagem.class, userId);
+    	
+    	boolean vampeta = Boolean.parseBoolean(request.getParameter("vampeta"));
+    	
+    	personagem.setVampeta(vampeta);
+		
+		em.getTransaction().begin();
+		em.merge(personagem);
+		em.getTransaction().commit();
+		
+		response.sendRedirect("PassarFase");
 	}
 
 }

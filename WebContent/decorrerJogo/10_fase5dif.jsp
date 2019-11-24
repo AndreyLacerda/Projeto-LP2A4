@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -37,7 +37,7 @@
         </div>
     </section>
     
-    <form method="post" action="/Escolhas">
+    <form method="post" action="../Variaveis">
 	    <section class="section">
 	        <div class="card">
 	        	<div class="card-content">
@@ -49,10 +49,10 @@
 	        	</div>
 		        <footer class="card-footer">
 		    		<p class="card-footer-item">
-		    			<button class="button" name="vampeta" onclick="/Redirect" value="false">Sai mano, curintia é lixo! Vou sozinho.</button>
+		    			<button class="button" name="vampeta" value="false">Sai mano, curintia é lixo! Vou sozinho.</button>
 		    		</p>
 		    		<p class="card-footer-item">
-						<button class="button" name="vampeta" onclick="/Redirect" value="true">SÓ BORA MULEKOTE</button>
+						<button class="button" name="vampeta" value="true">SÓ BORA MULEKOTE</button>
 					</p>
 	  		</footer>
 	        </div>

@@ -12,11 +12,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
+	<%@ include file="./topoLogin.jsp" %>
 	<div class="columns is-centered">
 		<div class='column is-one-third is-centered'>
 		<h1>Logue e Jogue Já!</h1>
 			<form method="post" action="Login">
-			
 				<div class="field">
 				  <div class="control has-icons-left has-icons-right">
 				    <input name="email" class="input" type="email" placeholder="Email" maxlength="45" required="true">

@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -46,44 +46,51 @@
             
             
             <!-- Aqui o if para aparecer o texto de acordo com o tipo de criança -->
-            
-            <p style="padding:20px">Você não foi uma criança muito comportada, nunca estudou nem deu valor a nada. Seu destino é ir para uma escola ruim. Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p>
-        <!--<p style="padding:20px">Você foi uma criança muito comportada, deu valor a tudo e estudou bastante. Entrou em uma boa escola e está prestes a terminar o ensino médio.  Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p> -->
-            
-            
+            <%@page import="Entities.Personagem, 
+            javax.persistence.EntityManager, 
+            javax.persistence.EntityManagerFactory, 
+            javax.persistence.Persistence" %>
+            <%
+	            EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetolp2a4");
+	    		EntityManager em = emf.createEntityManager();
+	    		
+	    		Personagem personagem = em.find(Personagem.class, userId);
+	    		
+            	if (personagem.getTipoCrianca() == 2){
+            %>
+            <p style="padding:20px">Você não foi uma criança muito comportada, nunca estudou nem deu valor a nada. Seu destino é ir para uma escola ruim. Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p>          
             </div>
         </div>
         <footer class="card-footer">
         
         <!--  criança ruim -->
-        
-            <p class="card-footer-item">
-            <span>
-            <a href="8_fase4dif.jsp">Socar a preguiça com o Maguila</a>
-            </span>
-            </p>
-            
-            <p class="card-footer-item">
-            <span>
-        	<a href="8_fase4dif.jsp">Sai daqui cara, eu nem te conheço</a>  
-            </span>
-            </p>
-            
+		<%
+            	} else{
+		%>
+		<p style="padding:20px">Você foi uma criança muito comportada, deu valor a tudo e estudou bastante. Entrou em uma boa escola e está prestes a terminar o ensino médio.  Entretanto, nas suas empreitadas você encontra um velho que diz ser ninguém menos que Maguila, e pergunta se você gostaria de socar a preguiça com ele.</p>
         <!--  criança boa -->
-            
-     <!--   <p class="card-footer-item">
-            <span>
-            <a href="7_fase4.jsp">Socar a preguiça com o Maguila</a>
-            </span>
-            </p>
-            <p class="card-footer-item">
-            <span>
-        	<a href="7_fase4.jsp">Sai daqui cara, eu nem te conheço</a> 
-            </span>
-            </p>  -->   
-            
-        </footer>
-        </div>
+
+         <%} %>
+         <section class="section">
+         <div class="container">
+    		<div class="columns is-centered">
+	       <form method="post" action="../Variaveis">
+	      	 <footer class="card-footer">
+	        	<p class="card-footer-item">
+	    			<input hidden type="text" value="true" name="mag">
+	        		<button class="button">Socar a preguiça com o Maguila</button>
+	        	</p>
+		    </form>
+	    	<form method="post" action="../Variaveis">
+		   	 	<p class="card-footer-item">
+	    			<input hidden type="text" value="false" name="mag">
+  					<button class="button">Sai daqui cara, eu nem te conheço</button>
+  				</p>
+		    </form>
+		    </div>
+		    </div>
+		</section>
+		</div>
     </section>
   </body>
 </html>

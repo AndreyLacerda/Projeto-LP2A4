@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -49,7 +49,7 @@
         <footer class="card-footer">
             <p class="card-footer-item">
             <span>
-            <a href="12_fase6.jsp">Estudar muito nas aulas e não fumar anarguilhos</a>
+            <a href="../PassarFase">Estudar muito nas aulas e não fumar anarguilhos</a>
             </span>
             </p>
             <p class="card-footer-item">

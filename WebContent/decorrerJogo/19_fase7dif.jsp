@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-
+<%@ include file="../topo.jsp" %>
         <nav class="navbar is-fixed-top" aria-label="dropdown navigation">
                 <a class="navbar-item">
                 </a>
@@ -50,7 +50,7 @@
         <footer class="card-footer">
             <p class="card-footer-item">
             <span>
-            <a href="16_morteroger.jsp">Bora afundar</a>
+            <a href="../Morte">Bora afundar</a>
             </span>
             </p>
         </footer>
