@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Entities.Personagem;
 import Entities.Usuario;
 
 /**
@@ -49,6 +50,10 @@ public class Login extends HttpServlet {
 			out.close();
 		} else {
 			if (usuario.getSenha().equals(senha)) {
+				Personagem personagem = em.find(Personagem.class, 1);
+				
+				
+				
 				PrintWriter out = response.getWriter();
 				out.println("<script>");
 				out.println("location='criacao_personagem.jsp';");
@@ -58,7 +63,7 @@ public class Login extends HttpServlet {
 				PrintWriter out = response.getWriter();
 				out.println("<script>");
 				out.println("alert('Senha Incorreta!');");
-				out.println("location='index.jsp';");
+				out.println("location='criacao_personagem.jsp';");
 				out.println("</script>");
 				out.close();
 			}

@@ -1,16 +1,24 @@
 package Entities;
 
-public class Personagem {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Personagem {
+	
+	@Id
 	private int fase;
 	private int tipoCrianca;
 	private boolean maguila;
 	private boolean vampeta;
 	private int dificuldade;
 	
-	public Personagem(int dificuldade, int fase) {
+	public Personagem(int dificuldade, int tipoCrianca, boolean maguila, boolean vampeta, int fase) {
 		this.dificuldade = dificuldade;
 		this.fase = fase;
+		this.tipoCrianca = tipoCrianca;
+		this.maguila = maguila;
+		this.vampeta = vampeta;
 	}
 
 	public int getDificuldade() {

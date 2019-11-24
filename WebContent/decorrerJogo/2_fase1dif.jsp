@@ -37,30 +37,26 @@
         </div>
     </section>
     
-    <section class="section">
-        <div class="card">
-        <div class="card-content">
-            <p class="level-item has-text-centered">
-            <div class="card">
-            <p style="padding:20px">Sua vida começa. Você veio de uma família de classe média, e seus pais sempre foram liberais com você. Você é uma criança comportada, que busca conhecimento ou é o capeta em forma de guri?</p>
-            </div>
-            </p>
-        </div>
-        <form method="post" action="/Escolhas">
-        <footer class="card-footer">
-            <p class="card-footer-item">
-            <span>
-            	<input name="crianca" class="button" onclick="/Redirect" value="comportado"><a >Sou comportado</a>
-            </span>
-            </p>
-            <p class="card-footer-item">
-            <span>
-                <input name="crianca" class="button" onclick="/Redirect" value="cramunhao"><a >SOU CRAMUNHÃO</a>
-            </span>
-            </p>
-        </footer>
-        </form>
-        </div>
-    </section>
+    <form method="post" action="/Escolhas">
+	    <section class="section">
+	    	<div class="card">
+	        	<div class="card-content">
+	            	<p class="level-item has-text-centered">
+	            	<div class="card">
+	            		<p style="padding:20px">Sua vida começa. Você veio de uma família de classe média, e seus pais sempre foram liberais com você. Você é uma criança comportada, que busca conhecimento ou é o capeta em forma de guri?</p>
+	            	</div>
+	            </div>
+	        </div>
+	        <footer class="card-footer">
+		    	<p class="card-footer-item">
+		    		<button class="button" name="crianca" onclick="/Redirect" value="1">Sou comportado</button>
+		    	</p>
+		    	<p class="card-footer-item">
+					<button class="button" name="crianca" onclick="/Redirect" value="2">SOU CRAMUNHÃO</button>
+				</p>
+	  		</footer>
+	    </section>
+    </form>
   </body>
 </html>
+

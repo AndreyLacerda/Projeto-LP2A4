@@ -37,29 +37,26 @@
         </div>
     </section>
     
-    <section class="section">
-        <div class="card">
-        <div class="card-content">
-            <p class="level-item has-text-centered">
-            <img style="padding-bottom:20px" src="../imagens/Vampeta.jpg"  width="500" height="500">
-            <div class="card">
-            <p style="padding:20px">Tomando uma boazinha com Zeca, você encontra a lenda brasileira, VAMPETA! E ele te convida para jogar um caromzinho de leve.</p>
-            </div>
-            </p>
-        </div>
-        <footer class="card-footer">
-            <p class="card-footer-item">
-            <span>
-            <a href="14_fase6dif.jsp">Sai mano, curintia pro inferno! Vou sozinho.</a>
-            </span>
-            </p>
-            <p class="card-footer-item">
-            <span>
-                <a href="14_fase6dif.jsp">SÓ BORA MULEKOTE</a>
-            </span>
-            </p>
-        </footer>
-        </div>
-    </section>
+    <form method="post" action="/Escolhas">
+	    <section class="section">
+	        <div class="card">
+	        	<div class="card-content">
+		            <p class="level-item has-text-centered">
+		           	<img style="padding-bottom:20px" src="../imagens/Vampeta.jpg"  width="500" height="500">
+		            <div class="card">
+		            	<p style="padding:20px">Tomando uma boazinha com Zeca, você encontra a lenda brasileira, VAMPETA! E ele te convida para jogar um caromzinho de leve.</p>
+		            </div>
+	        	</div>
+		        <footer class="card-footer">
+		    		<p class="card-footer-item">
+		    			<button class="button" name="vampeta" onclick="/Redirect" value="false">Sai mano, curintia é lixo! Vou sozinho.</button>
+		    		</p>
+		    		<p class="card-footer-item">
+						<button class="button" name="vampeta" onclick="/Redirect" value="true">SÓ BORA MULEKOTE</button>
+					</p>
+	  		</footer>
+	        </div>
+	    </section>
+    </form>
   </body>
 </html>
