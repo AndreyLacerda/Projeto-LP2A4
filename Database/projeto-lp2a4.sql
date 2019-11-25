@@ -20,6 +20,7 @@ CREATE TABLE Personagem (
     FOREIGN KEY (userEmail) REFERENCES Usuario (email)
 );
 DELETE FROM Personagem WHERE userEmail = 'andrey-lacerda@hotmail.com';
+DELETE FROM Usuario WHERE email = 'andrey-lacerda@hotmail.com';
 
 SELECT * FROM Usuario;
 SELECT * FROM Personagem;
